@@ -46,13 +46,10 @@ const Search = ({ setIsOpen }: Props) => {
           initial="hidden"
           animate="visible"
         >
-          <div
-            className="h-[60px] cursor-pointer rounded-l-lg bg-slate-100 p-5 pr-0"
-            onClick={() => setIsOpen(false)}
-          >
+          <div className="h-[60px] cursor-pointer rounded-l-lg bg-slate-100 p-5 pr-0">
             <SearchOutlinedIcon />
           </div>
-          <motion.input
+          <input
             className=" h-[60px] flex-1 rounded-lg rounded-l-none border-none bg-slate-100 p-5 focus:outline-none"
             placeholder="Search"
             type="text"

@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+  .search-input {
+    @apply h-[60px] flex-1 rounded-lg rounded-l-none border-none bg-slate-100 p-5 focus:outline-none;
+  }
+}

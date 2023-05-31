@@ -14,14 +14,16 @@ const iconStyle = {
 const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <header className="flex  items-center justify-between px-5 py-2">
+    <header className="flex  items-center justify-between px-5 py-2 md:px-10">
       <div className="relative h-[100px] w-[100px]">
         <Image src="/logo.svg" fill content="contain" alt="logo" />
       </div>
-      <input
-        className="hidden max-w-lg flex-1 rounded-sm border md:inline-block"
-        type="text"
-      />
+      <div className=" hidden lg:flex lg:w-[720px] xl:w-[900px]">
+        <div className="h-[60px] cursor-pointer rounded-l-lg bg-slate-100 p-5 pr-0">
+          <SearchOutlinedIcon />
+        </div>
+        <input placeholder="Search" className="search-input" type="text" />
+      </div>
 
       <div className="items center flex gap-2">
         <div className="lg:hidden" onClick={() => setIsSearchOpen(true)}>
