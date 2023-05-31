@@ -8,7 +8,7 @@ import Search from "./Search";
 
 const iconStyle = {
   color: "gray",
-  fontSize: 45,
+  fontSize: 35,
   cursor: "pointer",
 };
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
       <div className="relative h-[100px] w-[100px]">
         <Image src="/logo.svg" fill content="contain" alt="logo" />
       </div>
-      <div className=" hidden lg:flex lg:w-[720px] xl:w-[900px]">
+      <div className=" hidden  lg:flex lg:w-[50%] xl:w-[70%] xl:max-w-[900px]">
         <div className="h-[60px] cursor-pointer rounded-l-lg bg-slate-100 p-5 pr-0">
           <SearchOutlinedIcon />
         </div>

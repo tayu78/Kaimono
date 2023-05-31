@@ -12,7 +12,6 @@ const Search = ({ setIsOpen }: Props) => {
     hidden: {
       width: 0,
       display: "none",
-      // x: -100,
     },
     visible: {
       width: "75%",
@@ -46,18 +45,14 @@ const Search = ({ setIsOpen }: Props) => {
           initial="hidden"
           animate="visible"
         >
-          <div className="h-[60px] cursor-pointer rounded-l-lg bg-slate-100 p-5 pr-0">
+          <div className="h-[60px]  cursor-pointer rounded-l-lg bg-slate-100 p-5 pr-0">
             <SearchOutlinedIcon />
           </div>
-          <input
-            className=" h-[60px] flex-1 rounded-lg rounded-l-none border-none bg-slate-100 p-5 focus:outline-none"
-            placeholder="Search"
-            type="text"
-          />
+          <input className="search-input" placeholder="Search" type="text" />
         </motion.div>
 
         <motion.span
-          className="min-w-[15%] cursor-pointer text-center text-xl"
+          className="min-w-[15%] cursor-pointer text-center text-sm md:text-xl "
           onClick={() => setIsOpen(false)}
           variants={cancelVariants}
           animate="visible"
