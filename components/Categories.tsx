@@ -1,14 +1,16 @@
 import axios from "axios";
 import Link from "next/link";
 
+import { STRAPI_URL } from "@/config/constants";
+
 const Categories = async () => {
   const { data: categories } = await axios.get<{ data: Category[] }>(
-    "http://127.0.0.1:1337/api/categories"
+    `${STRAPI_URL}/api/categories`
   );
 
   return (
     <div>
-      <div className="flex justify-center gap-10 overflow-x-scroll border-b pb-3 text-lg md:text-2xl">
+      <div className="flex justify-center gap-10 overflow-x-scroll border-b pb-3 text-lg md:text-xl">
         {categories.data.map((category) => {
           return (
             <Link href="/" key={category.id}>
