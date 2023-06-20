@@ -33,5 +33,7 @@ interface Image {
 
 interface Size {
   id: number;
-  name: string;
+  attributes: {
+    name: string;
+  };
 }

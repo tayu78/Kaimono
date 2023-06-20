@@ -1,5 +1,5 @@
 import Categories from "@/components/Categories";
-import Products from "@/components/Products";
+import Products from "@/components/Product/Products";
 
 export default function Home() {
   return (
