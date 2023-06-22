@@ -2,6 +2,7 @@ import Image from "next/image";
 import axios from "axios";
 
 import { STRAPI_URL } from "@/config/constants";
+import ImageSlider from "../ImageSlider";
 
 interface Props {
   productId: string;
@@ -20,10 +21,9 @@ const Product = async ({ productId }: Props) => {
         <p> $ {price}</p>
         <p className="text-sm text-zinc-500">{description}</p>
       </div>
-      <div className="relative  h-[550px] ">
-        {/* TODO: create image slider instead of showing one image */}
-        <Image fill alt={name} src={images.data[0].attributes.url} />
-      </div>
+
+      <ImageSlider images={images.data} />
+
       <div className="p-10">
         <h3 className="mb-5 mt-10 text-xl">Select Sizes</h3>
         <ul className="mb-16 grid grid-cols-3 gap-3">
