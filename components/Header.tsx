@@ -14,7 +14,7 @@ const iconStyle = {
 const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <header className="flex  items-center justify-between px-5 py-2 md:px-10">
+    <header className="flex  items-center justify-between px-5 py-2 md:px-10 lg:mb-24">
       <div className="relative h-[100px] w-[100px]">
         <Image src="/logo.svg" fill content="contain" alt="logo" />
       </div>
